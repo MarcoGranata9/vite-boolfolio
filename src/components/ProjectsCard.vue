@@ -1,0 +1,25 @@
+<script>
+
+export default {
+    data() {
+        return {
+            apiUrl: 'http://127.0.0.1:8000',
+        }
+    },
+    props: {
+        project: Object,
+    },
+}
+</script>
+
+<template>
+    <div class="card h-100">
+        <img :src="`${apiUrl}/storage/${project.cover_img}`" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+        </div>
+    </div>
+</template>
+
+<style lang="scss" scoped></style>
