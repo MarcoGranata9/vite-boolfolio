@@ -18,6 +18,7 @@ export default {
         <div class="card-body">
             <h5 class="card-title">{{ project.title }}</h5>
             <p class="card-text">{{ project.description }}</p>
+            <p class="card-text">{{ project.type ? project.type.name : 'Nessun tipo' }}</p>
         </div>
     </div>
 </template>
