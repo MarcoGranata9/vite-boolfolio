@@ -1,5 +1,24 @@
 <script>
-
+export default {
+    data(){
+        return {
+            links: [
+                {
+                    name: 'home',
+                    title: 'Home',
+                },
+                {
+                    name: 'about',
+                    title: 'About',
+                },
+                {
+                    name: 'projects',
+                    title: 'Progetti',
+                },
+            ]
+        }
+    }
+}
 </script>
 
 <template>
@@ -12,19 +31,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <router-link :to="{ name: 'home' }" class="nav-link">
-                            Home
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'about' }" class="nav-link">
-                            About Us
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'projects' }" class="nav-link">
-                            Progetti
+                    <li class="nav-item" v-for="link in links">
+                        <router-link :to="{ name: link.name }" class="nav-link">
+                            {{link.title}}
                         </router-link>
                     </li>
                 </ul>
