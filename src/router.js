@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage.vue'
 import AboutUsPage from './pages/AboutUsPage.vue'
 import ProjectsPage from './pages/ProjectsPage.vue'
 import SingleProject from './pages/SingleProject.vue'
-
+import NotFound from './pages/NotFound.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -27,6 +27,11 @@ const router = createRouter({
             path: '/projects/:slug',
             name: 'single-project',
             component: SingleProject,
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            component: NotFound,
         }
     ]
 })

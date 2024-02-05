@@ -20,7 +20,8 @@ export default {
             <h5 class="card-title">{{ project.title }}</h5>
             <p class="card-text">{{ project.description }}</p>
             <p class="card-text">{{ project.type ? project.type.name : 'Nessun tipo' }}</p>
-            <router-link :to="{ name: 'single-project', params: {slug: project.slug}}" class="btn btn-primary">Dettagli</router-link>
+            <router-link :to="{ name: 'single-project', params: { slug: project.slug } }"
+                class="btn btn-primary">Dettagli</router-link>
         </div>
     </div>
 </template>

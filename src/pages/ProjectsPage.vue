@@ -13,7 +13,6 @@ export default {
     created() {
         axios.get(`${this.store.apiUrl}/api/projects`)
             .then((resp) => {
-                console.log(resp);
                 this.projects = resp.data.results;
             });
     },
